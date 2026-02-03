@@ -1,0 +1,228 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+  body {
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  color: #eaeaf0;
+
+  /*BACKGROUND */
+  background:
+    radial-gradient(circle at 15% 20%, rgba(255,122,24,0.12), transparent 40%),
+    radial-gradient(circle at 85% 30%, rgba(111,66,193,0.15), transparent 45%),
+    radial-gradient(circle at 50% 80%, rgba(0,212,255,0.10), transparent 50%),
+    linear-gradient(135deg, #0b0f1a, #0e1324, #0a0f22);
+
+  background-attachment: fixed;
+  line-height: 1.6;
+}
+
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  padding: 120px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(255,255,255,0.05),
+    transparent 60%
+  );
+  pointer-events: none;
+}
+
+.hero h1 {
+  font-size: 4.2rem;
+  letter-spacing: 4px;
+  background: linear-gradient(90deg, #ffb347, #ff7a18);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero .subtitle {
+  font-size: 2rem;
+  opacity: 0.75;
+}
+
+.hero .intro {
+  max-width: 620px;
+  opacity: 0.85;
+}
+
+/* SECTIONS */
+.section {
+  padding: 90px 10%;
+  text-align: center;
+  position: relative;
+}
+
+.section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(255,255,255,0.02),
+    transparent
+  );
+  pointer-events: none;
+}
+
+.section h2 {
+  font-size: 2.4rem;
+  margin-bottom: 35px;
+  color: #ffb347;
+  letter-spacing: 0.5px;
+}
+
+}
+.section h2 {
+  font-size: 2.4rem;
+  margin-bottom: 30px;
+  color: #ff9f45;
+}
+
+.alt {
+  background: rgba(255,255,255,0.03);
+  backdrop-filter: blur(8px);
+}
+
+/* CARD */
+.card {
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.12),
+    rgba(255,255,255,0.03)
+  );
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 35px;
+  border-radius: 22px;
+  backdrop-filter: blur(18px);
+  box-shadow:
+    0 10px 40px rgba(0,0,0,0.35),
+    inset 0 0 0 1px rgba(255,255,255,0.05);
+}
+
+/* SKILLS GRID */
+.skills-wrapper {
+  max-width: 800px;
+  margin: auto;
+}
+
+.skill-row {
+  margin-bottom: 25px;
+}
+
+.skill-info {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #f1f1f1;
+}
+
+.percent {
+  opacity: 0.7;
+}
+
+.skill-track {
+  width: 100%;
+  height: 8px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.skill-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #ff7a18, #ffb347);
+  border-radius: 5px;
+  animation: loadSkill 1.2s ease forwards;
+}
+
+@keyframes loadSkill {
+  from {
+    width: 0;
+  }
+}
+.skill-track {
+  background: rgba(255,255,255,0.18);
+}
+
+.skill-fill {
+  background: linear-gradient(90deg, #ff7a18, #ffb347);
+  box-shadow: 0 0 15px rgba(255,122,24,0.6);
+}
+/* LANGUAGES */
+.lang-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* SERVICES GRID */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 20px;
+}
+.service-icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #ff7a18;
+}
+
+/* CONTACT */
+.contact-btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 22px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
+  backdrop-filter: blur(6px);
+}
+.contact-btn.wa { background: #25d366; }
+.contact-btn.mail { background: #0072c6; }
+.contact-btn.port { background: #6f42c1; }
+
+/* FOOTER */
+footer {
+  padding: 20px;
+  text-align: center;
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
+.btn {
+  background: linear-gradient(135deg, #ff7a18, #ffb347);
+  padding: 14px 36px;
+  color: #0a0f22;
+  text-decoration: none;
+  border-radius: 999px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  transition: all 0.35s ease;
+  box-shadow: 0 10px 30px rgba(255,122,24,0.35);
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 45px rgba(255,122,24,0.5);
+}
